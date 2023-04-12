@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Save as PDF",
   "version": "1.0",
   "description": "Save the current window as a highly compressed PDF with the page title as the file name",
@@ -13,6 +13,9 @@
   "permissions": [
     "activeTab"
   ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  },
   "web_accessible_resources": [
     "jspdf.min.js",
     "html2pdf.js"
