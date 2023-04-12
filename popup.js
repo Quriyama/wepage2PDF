@@ -21,3 +21,8 @@ document.getElementById('downloadPDF').addEventListener('click', async () => {
 
   window.close();
 });
+
+// Send a message to the background script
+chrome.runtime.sendMessage({ type: 'exampleMessage', data: 'Hello, background script!' }, response => {
+  console.log('Response from background script:', response.data);
+});
