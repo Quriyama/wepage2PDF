@@ -1,4 +1,5 @@
 document.getElementById('downloadPDF').addEventListener('click', async () => {
+  console.log('Creating PDF...'); // Add this line
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
   await chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['html2pdf.bundle.min.js'] });
@@ -26,3 +27,4 @@ document.getElementById('downloadPDF').addEventListener('click', async () => {
 chrome.runtime.sendMessage({ type: 'exampleMessage', data: 'Hello, background script!' }, response => {
   console.log('Response from background script:', response.data);
 });
+
