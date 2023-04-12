@@ -1,4 +1,5 @@
 async function saveAsPDF() {
+  console.log('Creating PDF...');
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
   await chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['html2pdf.bundle.min.js'] });
