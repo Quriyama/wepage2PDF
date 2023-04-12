@@ -10,14 +10,21 @@
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
+  "background": {
+    "service_worker": "background.js"
+  },
   "permissions": [
     "activeTab",
     "scripting"
   ],
   "web_accessible_resources": [
     {
-      "resources": ["html2pdf.bundle.min.js"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "html2pdf.bundle.min.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ]
 }
