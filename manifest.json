@@ -12,5 +12,9 @@
   },
   "permissions": [
     "activeTab"
+  ],
+  "web_accessible_resources": [
+    "jspdf.min.js",
+    "html2pdf.js"
   ]
 }
