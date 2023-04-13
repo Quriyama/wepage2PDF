@@ -1,4 +1,4 @@
 # wepage2PDF
 
-// chrome extention
+// chrome extension
 // create pdf file from webpage
